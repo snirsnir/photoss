@@ -8,37 +8,31 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            flex-direction: column;
             background-color: #f7f7f7;
         }
         #slideshow {
-            width: 800px; /* You can adjust the size */
-            height: 800px; /* You can adjust the size */
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
+            width: 800px;  /* Maximum width */
+            height: 800px; /* Maximum height */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow: hidden; /* Hide parts of the image that exceed the container size */
         }
         #slideshow img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-        button {
-            cursor: pointer;
-            padding: 10px 20px;
-            margin: 5px;
+            max-width: 100%;  /* Limit image width to 100% of container */
+            max-height: 100%; /* Limit image height to 100% of container */
+            object-fit: contain; /* Ensures that aspect ratio is maintained */
         }
     </style>
 </head>
 <body>
-    <div id="slideshow"></div>
-    <!-- The buttons below are for demonstration and may not directly work with the provided JS without modification -->
-    <button id="auth">Authorize</button>
-    <button id="load">Load Images</button>
+    <div id="slideshow">
+        <!-- Images will be loaded here -->
+    </div>
 
+    <!-- Load the Google API JavaScript client library -->
     <script src="https://apis.google.com/js/api.js"></script>
+    <!-- Load your custom script -->
     <script src="app.js"></script>
 </body>
 </html>

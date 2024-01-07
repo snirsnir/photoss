@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Drive Slideshow</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Use full viewport height */
+            margin: 0; /* Reset default margin */
+        }
+        #slideshow {
+            max-width: 800px;
+            max-height: 800px;
+            overflow: hidden; /* Hide parts of the image that exceed the container size */
+        }
+        img {
+            max-width: 100%; /* Make images responsive to the container size */
+            max-height: 100%;
+            display: block; /* Remove extra space below images */
+            margin: auto; /* Center images horizontally */
+        }
+    </style>
+</head>
+<body>
+    <div id="slideshow">
+        <!-- Images will be loaded here -->
+    </div>
+
+    <!-- Load the Google API JavaScript client library -->
+    <script src="https://apis.google.com/js/api.js"></script>
+    <!-- Load your custom script -->
+    <script src="app.js"></script>
+</body>
+</html>
